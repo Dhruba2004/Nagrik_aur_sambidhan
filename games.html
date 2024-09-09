@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games - Nagrik Aur Samvidhan</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        .game-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .game {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .game h3 {
+            margin-top: 0;
+        }
+
+        .game button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+
+        .game button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto; /* Center the modal */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 90%; /* Full width for responsive design */
+            max-width: 900px; /* Max width */
+            position: relative;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .modal-content iframe {
+            width: 100%;
+            height: 500px; /* Adjust the height as needed */
+            border: none;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+        }
+
+        /* Responsive design for modals */
+        @media (max-width: 768px) {
+            .modal-content {
+                width: 95%;
+                max-width: 100%;
+            }
+
+            .modal-content iframe {
+                height: 400px; /* Adjust height for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Nagrik Aur Samvidhan</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="games">
+            <div class="container">
+                <h2>Interactive Games</h2>
+                <p>Our interactive games are designed to make learning about the Constitution of India both fun and educational. Explore the various game formats we offer and see how they can enhance your understanding of constitutional principles.</p>
+
+                <div class="game-container">
+                    <!-- Spin the Wheel -->
+                    <div class="game">
+                        <h3>Spin the Wheel</h3>
+                        <button id="spinButton">Play Spin the Wheel</button>
+                        <div id="spinModal" class="modal">
+                            <div class="modal-content">
+                                <span class="close" id="spinClose">&times;</span>
+                                <h3>Spin the Wheel</h3>
+                                <iframe src="https://wheelofnames.com?embed=your-wheel-id" allowfullscreen></iframe>
+                                <p>Spin the Wheel offers a dynamic learning experience where players spin a virtual wheel to land on different constitutional topics. Each segment presents a question or challenge related to the topic, encouraging users to test their knowledge and earn points.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Constitutional Cards -->
+                    <div class="game">
+                        <h3>Constitutional Cards</h3>
+                        <button id="cardsButton">Play Constitutional Cards</button>
+                        <div id="cardsModal" class="modal">
+                            <div class="modal-content">
+                                <span class="close" id="cardsClose">&times;</span>
+                                <h3>Constitutional Cards</h3>
+                                <iframe src="https://deck.toys/your-deck-id" allowfullscreen></iframe>
+                                <p>In Constitutional Cards, players draw from a deck of cards featuring questions, facts, or scenarios about the Constitution. The objective is to answer questions correctly or match cards, providing an interactive way to learn about constitutional principles.</p>
+                                <p>Use this <a href="https://deck.toys" target="_blank">Deck Toys link</a> to create and manage your card decks.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Snakes and Ladders -->
+                    <div class="game">
+                        <h3>Snakes and Ladders</h3>
+                        <button id="snakeButton">Play Snakes and Ladders</button>
+                        <div id="snakeModal" class="modal">
+                            <div class="modal-content">
+                                <span class="close" id="snakeClose">&times;</span>
+                                <h3>Snakes and Ladders</h3>
+                                <!-- Attempt to embed the game -->
+                                <iframe src="https://www.crazygames.com/game/snakes-and-ladders" allowfullscreen></iframe>
+                                <p>If the game is not visible, please <a href="https://www.crazygames.com/game/snakes-and-ladders" target="_blank">click here</a> to play Snakes and Ladders directly on Crazy Games.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Why Play Our Games?</h3>
+                <p>Our games are crafted to provide an enjoyable and educational experience. Here’s why they stand out:</p>
+                <ul>
+                    <li><strong>Engagement:</strong> The interactive nature of the games keeps users motivated and engaged.</li>
+                    <li><strong>Educational Value:</strong> Each game reinforces knowledge of constitutional principles through play.</li>
+                    <li><strong>Inclusivity:</strong> Our games are designed to be accessible and enjoyable for users of all ages and backgrounds.</li>
+                    <li><strong>Fun Learning:</strong> We combine education with entertainment to make learning about the Constitution a rewarding experience.</li>
+                </ul>
+                
+                <p>Explore our games and discover how interactive learning can make understanding the Constitution an enjoyable journey.</p>
+                <a href="index.html" class="btn">Back to Home</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Nagrik Aur Samvidhan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Get the modals
+        var spinModal = document.getElementById("spinModal");
+        var cardsModal = document.getElementById("cardsModal");
+        var snakeModal = document.getElementById("snakeModal");
+
+        // Get the buttons that open the modals
+        var spinBtn = document.getElementById("spinButton");
+        var cardsBtn = document.getElementById("cardsButton");
+        var snakeBtn = document.getElementById("snakeButton");
+
+        // Get the <span> elements that close the modals
+        var spinSpan = document.getElementById("spinClose");
+        var cardsSpan = document.getElementById("cardsClose");
+        var snakeSpan = document.getElementById("snakeClose");
+
+        // When the user clicks the button, open the modal 
+        spinBtn.onclick = function() {
+            spinModal.style.display = "block";
+        }
+
+        cardsBtn.onclick = function() {
+            cardsModal.style.display = "block";
+        }
+
+        snakeBtn.onclick = function() {
+            snakeModal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        spinSpan.onclick = function() {
+            spinModal.style.display = "none";
+        }
+
+        cardsSpan.onclick = function() {
+            cardsModal.style.display = "none";
+        }
+
+        snakeSpan.onclick = function() {
+            snakeModal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == spinModal) {
+                spinModal.style.display = "none";
+            }
+            if (event.target == cardsModal) {
+                cardsModal.style.display = "none";
+            }
+            if (event.target == snakeModal) {
+                snakeModal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
